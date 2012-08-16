@@ -1,0 +1,4 @@
+#compdef gadm
+
+_arguments "1:Sites:(rennes lille reims luxembourg nancy lyon grenoble sophia toulouse bordeaux)"
+
