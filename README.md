@@ -8,6 +8,11 @@ You need to install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ### The automatic installer
 
+From Grid'5000 don't forget to setup the http proxy
+
+	export http_proxy=http://proxy:3128
+	export https_proxy=http://proxy:3128
+
 #### with curl
 
 	curl https://raw.github.com/pmorillon/grid5000-zsh-plugin/master/tools/install.sh | zsh
@@ -39,4 +44,6 @@ You need to install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 * use the Grid'5000 theme (outside Grid'5000 usage is not recommanded) in your `~/.zshrc`
 	* `ZSH_THEME="grid5000"	`
-	
+
+* Change your default shell on Grid'5000 using the Users API from a frontend
+  * example : `curl -X PUT -H'Accept: application/json' -H'Content: application/json' -d 'shell=/bin/zsh' -ki https://api.grid5000.fr/2.1/grid5000/users/pmorillo`
